@@ -3,9 +3,10 @@ import Logo from "../assets/rima_logo.png"; // pastikan path sesuai dengan struk
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="bg-white shadow-md fixed w-full z-50">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex justify-between items-center h-16">
+    // <nav className="bg-white shadow-md fixed w-full z-50">
+    <nav className="fixed top-0 w-full z-50 bg-white border-b border-gray-200">
+      <div className="w-full px-3 lg:px-5">
+        <div className="flex justify-between items-center h-20 px-6 lg:px-12">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <img src={Logo} alt="Logo" className="h-10 w-auto" />
@@ -15,8 +16,8 @@ const Navbar: React.FC = () => {
           </div>
           
 
-          {/* Menu Tengah */}
-          <div className="hidden md:flex space-x-10">
+          {/* Menu */}
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:flex space-x-10">
             <a href="#" className="text-gray-700 hover:text-blue-500 text-lg font-medium">
               Home
             </a>
@@ -33,10 +34,10 @@ const Navbar: React.FC = () => {
 
           {/* Action Buttons */}
           <div className="flex space-x-4">
-            <button className="px-5 py-2 border border-gray-400 rounded-lg text-gray-700 font-medium hover:bg-gray-100 transition">
+            <button className="px-6 py-2 border border-gray-200 rounded-lg text-gray-900 font-medium shadow-sm hover:bg-gray-50 transition">
               Login
             </button>
-            <button className="px-5 py-2 bg-blue-500 text-white font-medium rounded-lg shadow hover:bg-blue-600 transition">
+            <button className="px-6 py-2 bg-indigo-400 text-white font-medium rounded-lg shadow-sm hover:bg-indigo-500 transition">
               Sign Up
             </button>
           </div>
