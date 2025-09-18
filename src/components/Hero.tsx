@@ -1,24 +1,57 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import App1 from "../assets/app1.png";
+import App2 from "../assets/app2.png";
+import App3 from "../assets/app3.png";
+
+const rotatingWords = ["Experience", "Journey"];
 
 const Hero: React.FC = () => {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % rotatingWords.length);
+    }, 2000); // ganti kata tiap 2 detik
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="flex flex-col items-center justify-center text-center px-6 py-20">
-      <h1 className="text-4xl md:text-5xl font-bold mb-6">
-        Make your reading <br />
-        experience better with <span className="text-indigo-600">RiMa</span>
+    <section className="w-full flex flex-col items-center justify-center text-center px-4 pt-52 pb-24">
+      <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900">
+        Improve your Reading{" "}
+        <span className="text-indigo-600 transition-all duration-500 ease-in-out">
+          {rotatingWords[index]}
+        </span>
       </h1>
-      <p className="max-w-2xl text-gray-700 mb-8">
-        The simpler way to store, organize, and share your files. With an AI
-        assistant to summarize and help you understand documents in seconds.
+
+      <p className="mt-8 text-2xl text-gray-600 max-w-3xl leading-relaxed">
+        The simpler way to store, organize, and share your files. Use AI assistant to summarize and help you understand documents in seconds.
       </p>
-      <div className="flex space-x-4">
-        <button className="px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold">
-          Try Now
+
+      <div className="mt-10 flex gap-6">
+        <button className="px-6 py-3 bg-gray-100 border border-gray-300 rounded-xl text-gray-800 font-medium hover:bg-gray-200">
+          Get Started
         </button>
+        <button className="px-6 py-3 bg-black text-white rounded-xl font-medium hover:bg-gray-800">
+          Download Rima Mobile
+        </button>
+      </div>
+
+      <div className="mt-20 flex items-center justify-center gap-6">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-          alt="Google Play"
-          className="h-12"
+          src={App1}
+          alt="App 1"
+          className="w-40 sm:w-48 md:w-56 rounded-2xl shadow-xl transform translate-y-6"
+        />
+        <img
+          src={App2}
+          alt="App 2"
+          className="w-52 sm:w-64 md:w-72 rounded-2xl shadow-2xl z-10"
+        />
+        <img
+          src={App3}
+          alt="App 3"
+          className="w-40 sm:w-48 md:w-56 rounded-2xl shadow-xl transform translate-y-6"
         />
       </div>
     </section>
