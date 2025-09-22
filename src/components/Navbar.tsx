@@ -1,9 +1,11 @@
-import React from "react";
-import Logo from "../assets/rima_logo.png"; // pastikan path sesuai dengan struktur project kamu
+import React, { useState } from "react";
+import Logo from "../assets/rima_logo.png";
 
 const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const menuItems = ["Home", "About", "Features", "Review"];
+
   return (
-    // <nav className="bg-white shadow-md fixed w-full z-50">
     <nav className="fixed top-0 w-full z-50 bg-white border-b border-gray-200">
       <div className="w-full px-3 lg:px-5">
         <div className="flex justify-between items-center h-20 px-6 lg:px-12">
@@ -14,26 +16,75 @@ const Navbar: React.FC = () => {
               RiMa
             </span>
           </div>
-          
 
-          {/* Menu */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:flex space-x-10">
-            <a href="#" className="text-gray-700 hover:text-blue-500 text-lg font-medium">
-              Home
-            </a>
-            <a href="#" className="text-gray-700 hover:text-blue-500 text-lg font-medium">
-              About
-            </a>
-            <a href="#" className="text-gray-700 hover:text-blue-500 text-lg font-medium">
-              Features
-            </a>
-            <a href="#" className="text-gray-700 hover:text-blue-500 text-lg font-medium">
-              Review
-            </a>
+            {menuItems.map((item) => (
+              <a
+                key={item}
+                href="#"
+                className="text-gray-700 hover:text-blue-500 text-lg font-medium"
+              >
+                {item}
+              </a>
+            ))}
           </div>
 
-          {/* Action Buttons */}
-          <div className="flex space-x-4">
+          <div className="hidden md:flex space-x-4">
+            <button className="px-6 py-2 border border-gray-200 rounded-lg text-gray-900 font-medium shadow-sm hover:bg-gray-50 transition">
+              Login
+            </button>
+            <button className="px-6 py-2 bg-indigo-400 text-white font-medium rounded-lg shadow-sm hover:bg-indigo-500 transition">
+              Sign Up
+            </button>
+          </div>
+
+          {/* Hamburger Mobile */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-700 focus:outline-none"
+            >
+              <svg
+                className="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {isOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-4">
+          {menuItems.map((item) => (
+            <a
+              key={item}
+              href="#"
+              className="block text-gray-700 hover:text-blue-500 text-lg font-medium"
+            >
+              {item}
+            </a>
+          ))}
+          <div className="flex flex-col gap-3 pt-4 border-t border-gray-100">
             <button className="px-6 py-2 border border-gray-200 rounded-lg text-gray-900 font-medium shadow-sm hover:bg-gray-50 transition">
               Login
             </button>
@@ -42,7 +93,7 @@ const Navbar: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
+      )}
     </nav>
   );
 };
