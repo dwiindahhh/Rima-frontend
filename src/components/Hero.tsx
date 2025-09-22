@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import App1 from "../assets/app1.png";
-import App2 from "../assets/app2.png";
-import App3 from "../assets/app3.png";
+import App1 from "../assets/src1.jpg";
+import App2 from "../assets/scr2.jpg";
+import App3 from "../assets/src3.jpg";
 
 const rotatingWords = ["Experience", "Journey"];
 
@@ -39,15 +39,17 @@ const Hero: React.FC = () => {
         </span>
       </h1>
 
-      <p className="mt-8 text-2xl text-gray-600 max-w-3xl leading-relaxed">
+      {/* Subtitle */}
+      <p className="mt-6 sm:mt-8 text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl leading-relaxed">
         The simpler way to store, organize, and share your files. Use AI assistant to summarize and help you understand documents in seconds.
       </p>
 
-      <div className="mt-10 flex gap-6">
-        <button className="px-6 py-3 bg-gray-100 border border-gray-300 rounded-xl text-gray-800 font-medium hover:bg-gray-200">
+      {/* Buttons */}
+      <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6">
+        <button className="px-6 py-3 bg-gray-100 border border-gray-300 rounded-xl text-gray-800 font-medium hover:bg-gray-200 transition">
           Get Started
         </button>
-        <button className="px-6 py-3 bg-black text-white rounded-xl font-medium hover:bg-gray-800">
+        <button className="px-6 py-3 bg-black text-white rounded-xl font-medium hover:bg-gray-800 transition">
           Download Rima Mobile
         </button>
       </div>
