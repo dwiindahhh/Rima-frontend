@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import App1 from "../assets/src1.jpg";
-import App2 from "../assets/scr2.jpg";
-import App3 from "../assets/src3.jpg";
-
+import App1 from "../assets/app1.png";
+import App2 from "../assets/app2.png";
+import App3 from "../assets/app3.png";
 
 const rotatingWords = ["Experience", "Journey"];
 
