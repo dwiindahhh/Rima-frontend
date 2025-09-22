@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import App1 from "../assets/app1.png";
 import App2 from "../assets/app2.png";
 import App3 from "../assets/app3.png";
@@ -11,7 +12,7 @@ const Hero: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % rotatingWords.length);
-    }, 2000); // ganti kata tiap 2 detik
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
