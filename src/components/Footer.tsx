@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
 
         {/* Copyright tengah */}
         <div className="text-center text-sm text-gray-600">
-          Rima ©2025. All rights reserved.
+          Rima ©2025. All rights reversed.
         </div>
 
         {/* Kolom kanan (kosong / placeholder) */}
