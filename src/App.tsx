@@ -4,7 +4,8 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Features from "./components/sections/feature-section";
 import CTASection from "./components/sections/cta-section";
-
+import ReaderReviews from "./components/ReaderReviews";
+import FAQSection from "./components/FAQSection";
 
 const App: React.FC = () => {
   return (
@@ -13,23 +14,21 @@ const App: React.FC = () => {
       <div id="home">
         <Home />
       </div>
-      <div id="about">
-        
-      </div>
+      <div id="about"></div>
       <div id="features">
         <Features />
       </div>
       <div id="review">
-
+        <ReaderReviews />
       </div>
       <div id="faq">
-
+        <FAQSection />
       </div>
       <div id="cta">
-        <CTASection/>
+        <CTASection />
       </div>
       <div id="footer">
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );

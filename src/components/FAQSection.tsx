@@ -40,7 +40,7 @@ const FAQItem = ({ faq, index }: { faq: FAQ; index: number }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="border border-gray-200 rounded-lg overflow-hidden bg-white">
+      className="border border-gray-200 rounded-lg overflow-hidden  bg-white">
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
@@ -80,7 +80,7 @@ const FAQItem = ({ faq, index }: { faq: FAQ; index: number }) => {
 
 export default function FAQSection() {
   return (
-    <section className="py-16 px-4 bg-white">
+    <section className="py-16 px-4 bg-gray-50">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
