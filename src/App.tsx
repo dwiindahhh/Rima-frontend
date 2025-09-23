@@ -2,14 +2,33 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
+import Features from "./components/sections/feature-section";
 
 const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <Home />
-      
-      <Footer/>
+      <div id="home">
+        <Home />
+      </div>
+      <div id="about">
+        
+      </div>
+      <div id="features">
+        <Features />
+      </div>
+      <div id="review">
+
+      </div>
+      <div id="faq">
+
+      </div>
+      <div id="cta">
+
+      </div>
+      <div id="footer">
+        <Footer/>
+      </div>
     </div>
   );
 };
