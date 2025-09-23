@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../assets/rima_logo.png";
+import { Link } from "react-scroll";
+import PlaystoreBadge from "../assets/badges/playstore_badge.png";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,23 +21,37 @@ const Navbar: React.FC = () => {
 
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:flex space-x-10">
             {menuItems.map((item) => (
-              <a
+              <Link
                 key={item}
-                href="#"
-                className="text-gray-700 hover:text-blue-500 text-lg font-medium"
+                to={item.toLowerCase()} 
+                smooth={true}
+                duration={500}
+                offset={-80} 
+                className="cursor-pointer text-gray-700 hover:text-blue-500 text-lg font-medium"
               >
                 {item}
-              </a>
+              </Link>
             ))}
           </div>
 
           <div className="hidden md:flex space-x-4">
-            <button className="px-6 py-2 border border-gray-200 rounded-lg text-gray-900 font-medium shadow-sm hover:bg-gray-50 transition">
+            {/* <button className="px-6 py-2 border border-gray-200 rounded-lg text-gray-900 font-medium shadow-sm hover:bg-gray-50 transition">
               Login
             </button>
             <button className="px-6 py-2 bg-indigo-400 text-white font-medium rounded-lg shadow-sm hover:bg-indigo-500 transition">
               Sign Up
-            </button>
+            </button> */}
+            <a
+              href="https://play.google.com/store/apps/details?id=com.bfour.rima_app&pcampaignid=web_share"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={PlaystoreBadge}
+                alt="Get it on Google Play"
+                className="h-12"
+              />
+            </a>
           </div>
 
           {/* Hamburger Mobile */}
@@ -74,23 +90,40 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-4">
+        <div className="md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-4 text-center">
           {menuItems.map((item) => (
-            <a
+            <Link
               key={item}
-              href="#"
-              className="block text-gray-700 hover:text-blue-500 text-lg font-medium"
+              to={item.toLowerCase()}
+              smooth={true}
+              duration={500}
+              offset={-80}
+              onClick={() => setIsOpen(false)} 
+              className="block cursor-pointer text-gray-700 hover:text-blue-500 text-lg font-medium"
             >
               {item}
-            </a>
+            </Link>
           ))}
-          <div className="flex flex-col gap-3 pt-4 border-t border-gray-100">
+          {/* <div className="flex flex-col gap-3 pt-4 border-t border-gray-100">
             <button className="px-6 py-2 border border-gray-200 rounded-lg text-gray-900 font-medium shadow-sm hover:bg-gray-50 transition">
               Login
             </button>
             <button className="px-6 py-2 bg-indigo-400 text-white font-medium rounded-lg shadow-sm hover:bg-indigo-500 transition">
               Sign Up
             </button>
+          </div> */}
+          <div className="flex flex-col items-center gap-3 pt-4 border-t border-gray-100">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.bfour.rima_app&pcampaignid=web_share"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={PlaystoreBadge}
+                alt="Get it on Google Play"
+                className="h-12"
+              />
+            </a>
           </div>
         </div>
       )}
