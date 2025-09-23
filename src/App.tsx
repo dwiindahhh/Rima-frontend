@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Features from "./components/sections/feature-section";
+import CTASection from "./components/sections/cta-section";
+
 
 const App: React.FC = () => {
   return (
@@ -24,7 +26,7 @@ const App: React.FC = () => {
 
       </div>
       <div id="cta">
-
+        <CTASection/>
       </div>
       <div id="footer">
         <Footer/>
