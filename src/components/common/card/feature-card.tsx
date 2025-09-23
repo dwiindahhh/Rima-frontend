@@ -86,7 +86,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
             >
                 <div className="relative group">
                     <div className="bg-black rounded-[2.5rem] p-2 shadow-2xl transition-transform duration-300 group-hover:scale-105">
-                        <div className="bg-white rounded-[2rem] overflow-hidden w-72 sm:w-96 md:w-[480px] h-[720px] md:h-[960px] relative">
+                        <div className="bg-white rounded-[2rem] overflow-hidden w-72 sm:w-96 md:w-[480px] h-[360px] md:h-[480px] relative">
                             {/* Loading placeholder */}
                             {!imageLoaded && (
                                 <div className="w-full h-full bg-gray-200 animate-pulse rounded-[2rem] flex items-center justify-center">

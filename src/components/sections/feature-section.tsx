@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import FeatureCard from "../common/card/feature-card";
 import { BookOpen, BarChart3, MessageCircle, Bot } from "lucide-react";
 
-// Import your actual images here
 // import Feature1 from "../assets/feature-1.png";
 // import Feature2 from "../assets/feature-2.png"; 
 // import Feature3 from "../assets/feature-3.png";
@@ -17,7 +16,7 @@ const Features: React.FC = () => {
       tagline: "Your Digital Collection",
       description: "effortlessly import, organize, and manage all your digital books and documents. our clean interface allows you to search and sort your entire collection in seconds, ensuring your personal library is always tidy and accessible right at your fingertips.",
       // imageSrc: Feature1, // Uncomment when you have actual images
-      imageSrc: "/api/placeholder/280/600", // Remove this line when using real images
+      imageSrc: "/api/placeholder/280/600", //Placeholder image
       imageAlt: "Digital collection interface",
       scrollSpeed: 3 as number,
       scrollDistance: "-50%" as string
@@ -28,7 +27,7 @@ const Features: React.FC = () => {
       tagline: "Achieve Reading Goals",
       description: "stay motivated on your reading journey. the app automatically logs the pages you've read and calculates your completion percentage, giving you a clear view of your progress. set goals, monitor your stats, and make every page count.",
       // imageSrc: Feature2, // Uncomment when you have actual images
-      imageSrc: "/api/placeholder/280/600", // Remove this line when using real images
+      imageSrc: "/api/placeholder/280/600", //Placeholder image
       imageAlt: "Reading progress interface",
       scrollSpeed: 4 as number,
       scrollDistance: "-60%" as string
@@ -39,7 +38,7 @@ const Features: React.FC = () => {
       tagline: "Open Directly from Chat", 
       description: "received a book or document from a friend? open and save files directly from whatsapp and other apps with a single tap. no more complex downloading or searching—your next read is instantly added to your library.",
       // imageSrc: Feature3, // Uncomment when you have actual images
-      imageSrc: "/api/placeholder/280/600", // Remove this line when using real images
+      imageSrc: "/api/placeholder/280/600", //Placeholder image
       imageAlt: "File sharing interface",
       scrollSpeed: 3.5 as number,
       scrollDistance: "-55%" as string
@@ -50,7 +49,7 @@ const Features: React.FC = () => {
       tagline: "Instant Answers with AI",
       description: "unlock a smarter reading experience with our integrated ai assistant. get quick summaries, define complex words, or ask questions about the content without ever leaving the page. it's the perfect companion for deeper understanding.",
       // imageSrc: Feature4, // Uncomment when you have actual images
-      imageSrc: "/api/placeholder/280/600", // Remove this line when using real images
+      imageSrc: "/api/placeholder/280/600", //Placeholder image
       imageAlt: "AI chat interface",
       scrollSpeed: 4.5 as number,
       scrollDistance: "-65%" as string
@@ -68,7 +67,7 @@ const Features: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-[42px] sm:text-[42px] md:text-[56px] font-bold text-gray-900 mb-4">
             Developed to match your
             <br />
             <span className="text-indigo-600"> reading needs</span>
