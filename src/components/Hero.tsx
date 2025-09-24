@@ -34,8 +34,7 @@ const Hero: React.FC = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className="absolute left-0 top-0 text-indigo-600"
-            >
+              className="absolute left-0 top-0 text-indigo-600">
               {rotatingWords[index]}
             </motion.span>
           </AnimatePresence>
