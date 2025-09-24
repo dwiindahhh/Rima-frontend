@@ -6,6 +6,7 @@ import Features from "./components/sections/feature-section";
 import CTASection from "./components/sections/cta-section";
 import ReaderReviews from "./components/ReaderReviews";
 import FAQSection from "./components/FAQSection";
+import About from "./components/about-section";
 
 const App: React.FC = () => {
   return (
@@ -14,7 +15,9 @@ const App: React.FC = () => {
       <div id="home">
         <Home />
       </div>
-      <div id="about"></div>
+      <div id="about">
+        <About />
+      </div>
       <div id="features">
         <Features />
       </div>
