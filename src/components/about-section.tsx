@@ -3,7 +3,7 @@ import bookAnimation from "../assets/animations/book-open.gif";
 
 const About: React.FC = () => {
   return (
-    <section className="bg-white py-20 px-6">
+    <section id="about-section" className="bg-white py-20 px-6">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-[42px] sm:text-[42px] md:text-[56px] font-bold text-gray-900 mb-6 leading-tight">
           Why Choose <span className="text-indigo-600">RiMa?</span>
