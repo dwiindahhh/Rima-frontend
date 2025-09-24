@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-scroll";
 import App1 from "../assets/src1.jpg";
 import App2 from "../assets/scr2.jpg";
 import App3 from "../assets/src3.jpg";
@@ -59,15 +60,22 @@ const Hero: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
         className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6">
+          <Link
+            to= "about-section"
+            smooth={true}
+            duration={600}
+          >
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="px-6 py-3 bg-gray-100 border border-gray-300 rounded-xl text-gray-800 font-medium hover:bg-gray-200 transition">
           Get Started
         </motion.button>
+        </Link>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          onClick={() => window.open("https://play.google.com/store/apps/details?id=com.bfour.rima_app&pcampaignid=web_share")}
           className="px-6 py-3 bg-black text-white rounded-xl font-medium hover:bg-gray-800 transition">
           Download Rima Mobile
         </motion.button>
