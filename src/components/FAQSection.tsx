@@ -13,23 +13,24 @@ interface FAQ {
 const faqs: FAQ[] = [
   {
     id: 1,
-    question: "Bagaimana cara menggunakan fitur chatbot di detail buku?",
+    question: "How do I use the chatbot feature on a book detail page?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "To use the chatbot, simply open a read page and tap on the floating chat button. You can then start asking questions about the book, author, or related topics directly.",
   },
   {
     id: 2,
-    question: "Fitur chatbot bisa digunakan untuk apa saja?",
+    question: "What can the chatbot help me with?",
     answer:
-      "Fitur chatbot dapat digunakan untuk berbagai keperluan seperti mendapatkan rekomendasi buku, mencari informasi detail tentang penulis, mendiskusikan plot cerita, dan mendapatkan ringkasan buku. Chatbot juga dapat membantu Anda menemukan buku serupa berdasarkan preferensi Anda.",
+      "The chatbot can provide book recommendations, author information, plot discussions, and quick summaries. It can also suggest similar books based on your reading preferences.",
   },
   {
     id: 3,
-    question: "Bagaimana cara membuat catatan dari buku yang di baca?",
+    question: "How can I create notes while reading a book?",
     answer:
-      "Untuk membuat catatan dari buku yang sedang dibaca, Anda dapat menggunakan fitur bookmark dan highlight yang tersedia. Klik pada teks yang ingin Anda catat, pilih opsi 'Add Note', kemudian tulis catatan Anda. Semua catatan akan tersimpan otomatis dan dapat diakses kapan saja melalui menu 'Notes'.",
+      "While reading, highlight the text you want to comment on and select 'Add Note'. Your notes will be saved automatically and can be accessed anytime in the 'Notes' section.",
   },
 ];
+
 
 const FAQItem = ({ faq, index }: { faq: FAQ; index: number }) => {
   const [isOpen, setIsOpen] = useState(index === 0); // First item open by default
@@ -40,7 +41,7 @@ const FAQItem = ({ faq, index }: { faq: FAQ; index: number }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="border border-gray-200 rounded-lg overflow-hidden bg-white">
+      className="border border-gray-200 rounded-lg overflow-hidden  bg-white">
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
@@ -80,7 +81,7 @@ const FAQItem = ({ faq, index }: { faq: FAQ; index: number }) => {
 
 export default function FAQSection() {
   return (
-    <section className="py-16 px-4 bg-white">
+    <section className="py-16 px-4 bg-gray-50">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

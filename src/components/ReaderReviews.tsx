@@ -15,33 +15,34 @@ interface Review {
 const reviews: Review[] = [
   {
     id: 1,
-    name: "Azadel Santo",
+    name: "Ahmad Pratama",
     rating: 5,
-    text: "Aplikasi yang luar biasa! Sangat membantu dalam mengelola tugas sehari-hari. Interface yang intuitif dan fitur-fitur yang lengkap membuat pekerjaan menjadi lebih efisien.",
-    avatar: "AS",
+    text: "An amazing application! Really helpful in managing daily tasks. The intuitive interface and complete features make work much more efficient.",
+    avatar: "AP",
   },
   {
     id: 2,
-    name: "Azadel Santo",
+    name: "Budi Santoso",
     rating: 5,
-    text: "Saya sangat terkesan dengan aplikasi ini. Desain yang menarik dan fungsionalitas yang sempurna. Sangat direkomendasikan untuk semua orang!",
-    avatar: "AS",
+    text: "I am very impressed with this application. The design is attractive and the functionality is perfect. Highly recommended for everyone!",
+    avatar: "BS",
   },
   {
     id: 3,
-    name: "Azadel Santo",
+    name: "Rizky Kurniawan",
     rating: 5,
-    text: "Pengalaman menggunakan aplikasi ini sangat memuaskan. Fitur-fitur yang disediakan sangat berguna dan mudah digunakan. Terima kasih!",
-    avatar: "AS",
+    text: "The experience of using this application is very satisfying. The features provided are very useful and easy to use. Thank you!",
+    avatar: "RK",
   },
   {
     id: 4,
-    name: "Azadel Santo",
+    name: "Marcel Fahrizal",
     rating: 5,
-    text: "Aplikasi terbaik yang pernah saya gunakan! Sangat membantu dalam produktivitas sehari-hari. Interface yang clean dan user-friendly.",
-    avatar: "AS",
+    text: "The best application I’ve ever used! Very helpful for daily productivity. The interface is clean and user-friendly.",
+    avatar: "MF",
   },
 ];
+
 
 const StarRating = ({ rating }: { rating: number }) => {
   return (
@@ -131,7 +132,7 @@ export default function ReaderReviews() {
   }, [totalPages, currentIndex]);
 
   return (
-    <section className="py-12 sm:py-16 px-4 bg-gray-50">
+    <section className="py-12 sm:py-16 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
