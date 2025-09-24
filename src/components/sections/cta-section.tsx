@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-//cta-section.tsx is not modified
-
-=======
 import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
@@ -78,4 +74,3 @@ const CTASection: React.FC = () => {
 };
 
 export default CTASection;
->>>>>>> 3390f337f5ef8dfc694b843fd659ec75fe4e593e
