@@ -53,7 +53,7 @@ const Features: React.FC = () => {
   ];
 
   return (
-    <section className="w-full px-4 py-16 sm:py-24 bg-gray-50">
+    <section className="w-full px-4 py-16 sm:py-24 bg-white">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -62,7 +62,7 @@ const Features: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-[42px] sm:text-[42px] md:text-[56px] font-bold text-gray-900 mb-4">
+          <h2 className="text-[42px] sm:text-[42px] md:text-[56px] font-bold text-gray-900 mb-4 text-center">
             Developed to match your
             <br />
             <span className="text-indigo-600"> reading needs</span>
